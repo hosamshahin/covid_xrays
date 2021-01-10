@@ -10,17 +10,7 @@ logger = logging.getLogger(__name__)
 
 
 
-def make_prediction_sample(image_path, cpu=True,
-                           sample_size=config.BEST_MODEL_PARAMS['sample_size'],
-                           with_oversampling=config.BEST_MODEL_PARAMS['with_oversampling'],
-                           with_focal_loss=config.BEST_MODEL_PARAMS['with_focal_loss'],
-                           with_weighted_loss=config.BEST_MODEL_PARAMS['with_weighted_loss'],):
-
-    learn = load_saved_learner(sample_size=sample_size,
-                               with_oversampling=with_oversampling,
-                               with_focal_loss=with_focal_loss,
-                               with_weighted_loss=with_weighted_loss,
-                               cpu=cpu)
+def make_prediction_sample(image_path, learn):
 
     # load image in grayscale
     image = open_image(image_path, convert_mode='L')
