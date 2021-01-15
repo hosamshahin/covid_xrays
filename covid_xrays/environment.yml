@@ -5,4 +5,5 @@ dependencies:
   - pip
   - pip:
       - requests
+      - fastprogress==0.2.6
       - git+https://github.com/doaa-altarawy/covid_xrays.git#egg=covid_xrays_model&subdirectory=covid_xrays_model
